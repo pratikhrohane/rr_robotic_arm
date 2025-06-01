@@ -1,0 +1,32 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+    # Declare the controllers available to the controller manager
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: forward_command_controller/ForwardCommandController
+
+# Parameters specific to the arm_controller
+arm_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint3
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
+# Parameters specific to the gripper_controller
+gripper_controller:
+  ros__parameters:
+    joints:
+      - finger_joint1
+      - finger_joint2
+    interface_name: position

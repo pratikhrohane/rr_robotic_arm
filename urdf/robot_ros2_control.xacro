@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rr_robotic_arm">
+    <ros2_control name="RobotSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="joint1">
+            <command_interface name="position"/>
+            <state_interface name="position">
+                <param name="min">-1.57</param>
+                <param name="min">1.57</param>
+            </state_interface>
+            <state_interface name="velocity"/>
+        </joint>
+            <joint name="joint3">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                    <param name="min">-1.57</param>
+                    <param name="min">1.57</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="finger_joint1">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                    <param name="min">0</param>
+                    <param name="min">0.03</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>
+            <joint name="finger_joint2">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                    <param name="min">0</param>
+                    <param name="min">0.03</param>
+                </state_interface>
+                <state_interface name="velocity"/>
+            </joint>       
+    </ros2_control>
+</robot>
