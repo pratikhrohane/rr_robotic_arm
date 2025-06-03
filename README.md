@@ -161,7 +161,7 @@ ros2 run rr_robotic_arm gripper_command close
 ### ✅ How the Package Was Created
 
 ```bash
-cd ~/gahan_ai_ws/src
+cd ~/ros2_ws/src
 ros2 pkg create rr_robotic_arm \
   --build-type ament_python \
   --dependencies rclpy std_msgs sensor_msgs geometry_msgs trajectory_msgs controller_manager xacro gazebo_ros2_control launch launch_ros
