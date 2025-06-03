@@ -202,7 +202,7 @@ sudo apt update && sudo apt install \
 ### 🛠️ Build Instructions
 
 ```bash
-cd ~/gahan_ai_ws
+cd ~/ros2_ws
 colcon build --packages-select rr_robotic_arm
 source install/setup.bash
 ```
